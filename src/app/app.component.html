@@ -13,3 +13,12 @@
 {{ date | date: 'yyyy/MM/dd'}}
 <br/>
 {{ money | currency }}
+<br/>
+<div *ngIf="isAdmin">
+  Realmente Administrator!
+</div>
+<div [ngSwitch]="profile">
+  <p *ngSwitchCase="1">You can read & write.</p>
+  <p *ngSwitchCase="2">You can read.</p>
+  <p *ngSwitchDefault>Go back, Please!</p>
+</div>
